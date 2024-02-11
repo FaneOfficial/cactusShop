@@ -39,7 +39,7 @@ BasketProduct.belongsTo(Basket);
 Product.hasMany(BasketProduct);
 BasketProduct.belongsTo(Product);
 
-Product.hasMany(ProductInfo);
+Product.hasMany(ProductInfo, {as: 'info'});
 ProductInfo.belongsTo(Product);
 
 module.exports = {
